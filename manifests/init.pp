@@ -1,4 +1,4 @@
-class puppetSlaver {
+class puppetslaver {
 	
 	package {'puppet':
 		ensure => installed,
