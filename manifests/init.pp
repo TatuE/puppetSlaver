@@ -5,13 +5,13 @@ class puppetSlaver {
 	}
 	
 	file {'/ect/default/puppet':
-		content => ("puppet/puppet"),
+		content => template ("puppet/puppet"),
 		require => Package ['puppet'],
 		notify => Service ['puppet'],
 	}
 	
 	file { '/etc/puppet/puppet.conf':
-		content => ("puppet/puppet.conf"),
+		content => template ("puppet/puppet.conf"),
                 require => Package ['puppet'],
                 notify => Service ['puppet'],
 	}
