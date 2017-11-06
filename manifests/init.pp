@@ -4,8 +4,8 @@ class puppetslaver {
 		ensure => installed,
 	}
 	
-	file {'/ect/default/puppet':
-		content => "START=yes",
+	file {'/etc/default/puppet':
+		content => tempalte ("puppetslaver/puppet"),
 		require => Package ['puppet'],
 		notify => Service ['puppet'],
 	}
