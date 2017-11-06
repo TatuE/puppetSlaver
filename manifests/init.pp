@@ -5,7 +5,7 @@ class puppetslaver {
 	}
 	
 	file {'/etc/default/puppet':
-		content => tempalte ("puppetslaver/puppet"),
+		content => template ("puppetslaver/puppet"),
 		require => Package ['puppet'],
 		notify => Service ['puppet'],
 	}
