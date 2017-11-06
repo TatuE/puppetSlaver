@@ -5,7 +5,7 @@ class puppetslaver {
 	}
 	
 	file {'/ect/default/puppet':
-		content => template ("puppetslaver/puppet"),
+		content => "START=yes",
 		require => Package ['puppet'],
 		notify => Service ['puppet'],
 	}
